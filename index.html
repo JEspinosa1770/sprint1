@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Sprint1 Página de Marcadores" content="Maquetación y código de una página de entrada de marcadores">
+    <title>Sprint 1 - Bookmark Landing Page</title>
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo-bookmark.svg" alt="Logo de la página Bookmarks">
+        </div>
+        <div class="menu-list-big">
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" id="btn-login">Login</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <button id="menu-toggle" aria-label="Abrir menú">
+                <img src="img/icon-hamburger.svg" alt="Icono de hamburguesa para el menú oculto"> 
+            </button>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <div class="logo-hmenu">
+                <img src="img/icon.svg" alt="Logo de la página Bookmarks">
+            </div>
+            <div class="menu-closer">
+                <button id="menu-close" class="menu" aria-label="Cerrar menú">
+                    <img src="img/icon-close.svg" alt="Icono de cierre para cerrar el menú"> 
+                </button>
+            </div>
+            <ul class="menu-list">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" id="btn-login">Login</a></li>
+            </ul>
+            <div class="social">
+                <img src="img/icon-facebook.svg" alt="Botón de acceso a Facebook">
+                <img src="img/icon-twitter.svg" alt="Botón de acceso a Twitter">
+            </div>
+        </nav>
+            
+        </header>
+        <main>
+        <section class="simple">
+            <article class="image">
+                <img src="img/illustration-hero.svg" alt="Se muestra el dibujo de un menú con opciones">
+                <!-- <div class="back-image"></div> -->
+            </article>
+            <article class="description">
+                <h1>A Simple Bookmark Manager</h1>
+                <p>A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free</p>
+                <div class="twoButtons">
+                    <button class="btn-primary">Get it on Chrome</button>
+                    <button class="btn-secondary">Get it on Firefox</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="features">
+            <article class="description">
+                <h2>Features</h2>
+                <p>Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+            </article>
+
+            <nav class="features-links menu1">
+                    <a href="#" class="active" data-id="1">Simple Bookmarking</a>
+                    <a href="#" data-id="2">Speedy Searching</a>
+                    <a href="#" data-id="3">Easy Sharing</a>                
+            </nav>
+            <article class="feat-description">
+                <div class="feat-desc-image">
+                    <img class="item" id="content-image" src="img/illustration-features-tab-1.svg" alt="Se muestra el dibujo de un menú con opciones">
+                </div>
+                <div>
+                    <h2 class="item" id="content-subtitle">Bookmark in one click</h2>
+                    <p class="item" id="content-text">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.</p>
+                    <button class="btn-primary">More info</button>
+                </div>
+            </article>
+        </section>
+        
+        <section class="download">
+            <article class="description">
+                <h2>Download the extension</h2>
+                <p>We've got more browsers in the pipeline. Please do let us know if you've got a favorite you'd like us to prioritize.</p>
+            </article>
+            <div>
+                <article class="navigator-one navigator">
+                    <img src="img/logo-chrome.svg" alt="Logo de Chrome">
+                    <h3>Add to Chrome</h3>
+                    <p>Minimum version 62</p>
+                    <img class="dots" src="img/bg-dots.svg" alt="Línea de puntos separadora">
+                    <button class="btn-primary">Add & Install Extension</button>
+                </article>
+                <article class="navigator-two navigator">
+                    <img src="img/logo-firefox.svg" alt="Logo de Firefox">
+                    <h3>Add to Firefox</h3>
+                    <p>Minimum version 55</p>
+                    <img class="dots" src="img/bg-dots.svg" alt="Línea de puntos separadora">
+                    <button class="btn-primary">Add & Install Extension</button>
+                </article>
+                <article class="navigator-three navigator">
+                    <img src="img/logo-opera.svg" alt="Logo de Opera">
+                    <h3>Add to Opera</h3>
+                    <p>Minimum version 46</p>
+                    <img class="dots" src="img/bg-dots.svg" alt="Línea de puntos separadora">
+                    <button class="btn-primary">Add & Install Extension</button>
+                </article>
+            </div>
+        </section>
+        
+        <section class="faqs">
+            <article class="description">
+                <h2>Frequently Asked Questions</h2>
+                <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
+            </article>
+            <div class="details-faqs">
+                <details class="detail">
+                    <summary class="question">
+                        <span class="summary-text">What is Bookmark?</span>
+                        <span class="summary-icon"><img class="icon-arrow" src="img/icon-arrow.svg" alt="Icono de flecha hacia abajo"></span>
+                    </summary>
+                    <div class="question">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quasi necessitatibus fuga, voluptas est totam doloribus aperiam quod quaerat ratione tenetur voluptatibus accusantium quis tempore facilis dolorum. Dignissimos, aperiam veniam.</p>
+
+                    </div>
+                </details>
+                <details class="detail">
+                    <summary class="question">
+                        <span class="summary-text">How can I request a new browser?</span>
+                        <span class="summary-icon"><img class="icon-arrow" src="img/icon-arrow.svg" alt="Icono de flecha hacia abajo"></span>
+                    </summary>
+                    <div class="question">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quasi necessitatibus fuga, voluptas est totam doloribus aperiam quod quaerat ratione tenetur voluptatibus accusantium quis tempore facilis dolorum. Dignissimos, aperiam veniam.</p>
+                    </div>
+                </details>
+                <details class="detail">
+                    <summary class="question">
+                        <span class="summary-text">Is there a mobile app?</span>
+                        <span class="summary-icon"><img class="icon-arrow" src="img/icon-arrow.svg" alt="Icono de flecha hacia abajo"></span>
+                    </summary>
+                    <div class="question">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quasi necessitatibus fuga, voluptas est totam doloribus aperiam quod quaerat ratione tenetur voluptatibus accusantium quis tempore facilis dolorum. Dignissimos, aperiam veniam.</p>
+                    </div>
+                </details>
+                 <details class="detail">
+                    <summary class="question">
+                        <span class="summary-text">What about other Chronium browsers?</span>
+                        <span class="summary-icon"><img class="icon-arrow" src="img/icon-arrow.svg" alt="Icono de flecha hacia abajo"></span>
+                    </summary>
+                    <div class="question">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quasi necessitatibus fuga, voluptas est totam doloribus aperiam quod quaerat ratione tenetur voluptatibus accusantium quis tempore facilis dolorum. Dignissimos, aperiam veniam.</p>
+                    </div>
+                </details>
+                <button id="btn-faqs" class="btn-primary">More info</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="form">
+            <form action="" class="contact">
+                <p class="joined">35.000+ ALREADY JOINED</p>
+                <div>
+                    <label class="foot-form" for="emailContact">Stay up-to-date with what we're doing</label>
+                    <input type="email" name="emailContact" id="emailInput" class="foot-form" placeholder="Enter your email address" >
+                    <!-- <p id="errorMSG" class="error">Whooops, make sure it's an email</p> -->
+                    <button class="foot-form btn-tertiary" onclick="validateEmail(this)">Contact us</button>
+                </div>
+            </form>
+        </section>
+        <section class="foot">
+            <div id="footer-pure">
+                <div class="logo">
+                    <img src="img/icon.svg" alt="Logo de la página Bookmarks">
+                </div>
+                <nav>
+                    <ul class="menu-footer">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="social-foot">
+                    <img src="img/icon-facebook.svg" alt="Botón de acceso a Facebook">
+                    <img src="img/icon-twitter.svg" alt="Botón de acceso a Twitter">
+                </div>
+            </div>
+        </section>
+
+    </footer>
+</body>
+
+<script src="js/main.js"></script>
+</html>
