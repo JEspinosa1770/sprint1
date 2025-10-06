@@ -34,7 +34,8 @@ a {
 .header {
     display: flex;
     flex-flow: row nowrap;
-    margin: 2rem 1rem 2rem 1rem;
+    /* margin: 2rem 1rem 2rem 1rem; */
+    padding: 2rem 1rem 2rem 1rem;
 }
 
 .logo {
@@ -71,10 +72,8 @@ a {
     height: auto;
     text-align: center;
     list-style: none;
-
     padding-left: 0;
     margin-left: 0;
-    justify-content: flex-start;
 }
 
 #nav-menu .logo-hmenu {
@@ -423,8 +422,6 @@ summary::marker {
 }
 
 #btn-faqs {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     display: block;
     margin: 2rem auto;
 }
