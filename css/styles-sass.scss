@@ -1,0 +1,38 @@
+@use 'generals'; 
+@use 'buttons';
+
+// Header area
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+
+
+.menu-list-big li a:hover, .menu-list li a:hover {
+    color: $text-hovered;
+}
+
+// Mixins, algo así como funciones
+@mixin caja_personalizada($fondo: white, $color: $text-hovered) {
+    background-color: $fondo;
+    border: 4px solid black;
+    box-shadow: 0 0 2px black;
+    color: $color;
+}
+
+.caja {
+    @include caja_personalizada(); // carga todos los estilos definidos en el mixin de caja_personalizada
+}
+
+.caja-secundaria {
+    @include caja_personalizada($fondo: yellow, $color: blue); // carga todos los estilos definidos en el mixin pero le cambiamos un par para esta caja-secundaria
+}
+
+// Operadores
+.caja, .caja-secundaria {
+    width: 400px + 100px;
+}
+
+// Al final, hay que compilarlo desde el símbolo del sistema en la carpeta del css, con sass --watch (archivo de entrada sass) (archivo de salida css)

@@ -1,0 +1,50 @@
+// Form footer
+.form {
+    background-color: $background-color-form;
+    font-family: $main-font;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.joined {
+    padding: 1rem 0;
+    color: $text-color-nearwhite;
+    font-size: 0.7rem;
+}
+
+.contact {
+    width: 80%;
+}
+
+.contact label {
+    color: $text-color-nearwhite;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+@mixin contact_input_btn($height: 5vh, $mbtn: 1rem) {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;    
+    height: $height;
+    margin-bottom: $mbtn;
+}
+
+.contact input {
+    @include contact_input_btn($height: 5vh, $mbtn: 1rem);
+}
+
+.contact button {
+    @include contact_input_btn($height: 5vh, $mbtn: 3rem);
+}
+
+.invalid {
+    border-color: $text-hovered; 
+}
+
+#errorMSG {
+    display: none;
+} 

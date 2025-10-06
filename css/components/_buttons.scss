@@ -1,0 +1,55 @@
+@mixin button ($btncolor: $btn-primary-color, $color: $text-color-nearwhite) {
+    border: 1px solid $btncolor;
+    background-color: $btncolor;
+    color: $color;
+    padding: 10px 15px 10px 15px ;
+    border-radius: 4px;
+    margin: 5px;
+    // box-shadow: 3px 3px 5px $shadow-color-nearwhite;
+}
+
+.btn-primary {
+    @include button($btncolor: $btn-primary-color, $color: $text-color-nearwhite);
+    box-shadow: 3px 3px 5px $shadow-color-nearwhite;
+}
+
+.btn-primary:hover {
+    background-color: $text-color-nearwhite;
+    color: $btn-primary-color;
+}
+
+.btn-secondary {
+    @include button($btncolor: $btn-secondary-color, $color: $text-color-diverse);
+    box-shadow: 3px 3px 5px $shadow-color-nearwhite;
+}
+
+.btn-secondary:hover {
+    border: 1px solid $text-color-diverse;
+    background-color: $text-color-nearwhite;
+}
+
+.btn-tertiary {
+    @include button($btncolor: $btn-tertiary-color, $color: $text-color-nearwhite);
+    width: 150px;
+}
+
+.btn-tertiary:hover {
+    color: $text-hovered;
+    background-color: $btn-lines-drop-menu;
+}
+
+#btn-login {
+    border: 2px solid $btn-lines-drop-menu;
+    border-radius: 4px;
+    margin: 0;
+    padding: 3px 30%;
+}
+
+#btn-login:hover {
+    border: 2px solid $text-hovered;
+}
+
+#btn-faqs {
+    display: block;
+    margin: 2rem auto;
+}
