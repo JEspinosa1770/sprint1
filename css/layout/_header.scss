@@ -1,7 +1,7 @@
 .header {
     display: flex;
     flex-flow: row nowrap;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .logo {
@@ -13,10 +13,6 @@
 
 .menu {
     justify-content: right;   
-}
-
-.menu-list-big {
-    display: none;
 }
 
 #menu-toggle {
@@ -31,7 +27,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--dropdown-menu-color);
+    background-color: $dropdown-menu-color;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
@@ -46,8 +42,11 @@
     left: 0;
     margin: 0.8rem;
     top: 0.8rem;
-    /* flex: 1 1 auto;    */
     align-items: center;
+}
+
+#nav-menu .logo-hmenu img {
+    float: left;
 }
 
 .menu-closer {
@@ -55,14 +54,10 @@
     justify-content: flex-end;
 }
 
-#nav-menu .logo-hmenu img {
-    float: left;
-}
-
 .menu-list {
     list-style: none;
-    flex: 0 0 100%;
     display: flex;
+    flex: 0 0 100%;
     flex-direction: column;
     padding-left: 0;
     padding-top: 1rem;
@@ -78,14 +73,17 @@
 }
 
 .menu-list li a {
+    @include a-styles();
     margin: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--btn-lines-drop-menu);
+    color: $btn-lines-drop-menu;
+}
+
+.menu-list-big {
+    display: none;
 }
 
 .menu-list-big li a:hover, .menu-list li a:hover {
-    color: var(--text-hovered);
+    color: $text-hovered;
 }
 
 #nav-menu.show {
@@ -114,5 +112,6 @@
 }
 
 .social img:hover {
-    background-color: var(--text-hovered);
+    background-color: $text-hovered;
 }
+

@@ -25,14 +25,6 @@
     margin-bottom: 1rem;
 }
 
-@mixin contact_input_btn($height: 5vh, $mbtn: 1rem) {
-    width: 100%;
-    box-sizing: border-box;
-    display: block;    
-    height: $height;
-    margin-bottom: $mbtn;
-}
-
 .contact input {
     @include contact_input_btn($height: 5vh, $mbtn: 1rem);
 }

@@ -12,28 +12,6 @@ a {
     font-family: $main-font;
 }
 
-@mixin style_description($color: $text-color-p, $fontsize: 0.8rem, $lineheight: 1.8) {
-    // .description {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        padding-top: 2rem;
-        
-        p {
-            color: $color;
-            font-size: $fontsize;
-            line-height: $lineheight;
-            padding-top: 1.3rem;
-            text-align: center;
-        }
-    // }
-}
-
-@mixin styles_h($fontsize: 1.7rem) {
-    font-size: $fontsize;
-    font-weight: bold;
-}
-
 .description {
     @include style_description($text-color-p, 0.8rem, 1.8)
 }

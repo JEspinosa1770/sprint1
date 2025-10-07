@@ -28,19 +28,3 @@
     margin: 1rem 0 0 0;
     padding: 0;
 }
-
-@media screen and (min-width: $breakpoint-tablet) {
-    .navigator-one {
-        align-self: flex-start;
-        margin-right: 2rem;
-    }
-
-    .navigator-two {
-        align-self: center;
-        margin-right: 2rem;
-    }
-
-    .navigator-three {
-        align-self: flex-end
-    }
-}

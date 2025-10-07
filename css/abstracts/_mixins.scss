@@ -1,0 +1,55 @@
+@mixin style_description($color: $text-color-p, $fontsize: 0.8rem, $lineheight: 1.8) {
+    // .description {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding-top: 2rem;
+        
+        p {
+            color: $color;
+            font-size: $fontsize;
+            line-height: $lineheight;
+            padding-top: 1.3rem;
+            text-align: center;
+        }
+    // }
+}
+
+@mixin styles_h($fontsize: 1.7rem) {
+    font-size: $fontsize;
+    font-weight: bold;
+}
+
+@mixin button ($btncolor: $btn-primary-color, $color: $text-color-nearwhite) {
+    border: 1px solid $btncolor;
+    background-color: $btncolor;
+    color: $color;
+    padding: 10px 15px 10px 15px ;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+@mixin contact_input_btn($height: 5vh, $mbtn: 1rem) {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;    
+    height: $height;
+    margin-bottom: $mbtn;
+}
+
+@mixin a-styles {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@mixin imagebefore($left: 40px, $top: 80px, $width: 100%, $height: 70%) {
+    content: "";
+    position: absolute;
+    left: $left;    
+    top: $top;     
+    width: $width; 
+    height: $height;
+    background-color: $background-image-blue; 
+    border-radius: 0 0 0 15rem; 
+    z-index: 0;
+}
