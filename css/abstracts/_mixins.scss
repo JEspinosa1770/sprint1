@@ -1,5 +1,4 @@
 @mixin style_description($color: $text-color-p, $fontsize: 0.8rem, $lineheight: 1.8) {
-    // .description {
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -12,16 +11,16 @@
             padding-top: 1.3rem;
             text-align: center;
         }
-    // }
 }
 
 @mixin styles_h($fontsize: 1.7rem) {
     font-size: $fontsize;
     font-weight: bold;
+    text-align: center;
 }
 
 @mixin button ($btncolor: $btn-primary-color, $color: $text-color-nearwhite) {
-    border: 1px solid $btncolor;
+    // border: 1px solid $btncolor;
     background-color: $btncolor;
     color: $color;
     padding: 10px 15px 10px 15px ;

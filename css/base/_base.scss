@@ -16,15 +16,15 @@ a {
     @include style_description($text-color-p, 0.8rem, 1.8)
 }
 
-.h1 {
+h1 {
     @include styles_h($fontsize: 1.7rem);
 }
 
-.h2 {
+h2 {
     @include styles_h($fontsize: 1.4rem);
 }
 
-.h3 {
+h3 {
     @include styles_h($fontsize: 1rem);
     margin: 1.6rem 0 0 0;
 }

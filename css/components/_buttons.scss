@@ -1,5 +1,6 @@
 .btn-primary {
     @include button($btncolor: $btn-primary-color, $color: $text-color-nearwhite);
+    border: 1px solid $btn-primary-color;
     box-shadow: 3px 3px 5px $shadow-color-nearwhite;
 }
 
@@ -10,6 +11,7 @@
 
 .btn-secondary {
     @include button($btncolor: $btn-secondary-color, $color: $text-color-diverse);
+    border: 1px solid $btn-secondary-color;
     box-shadow: 3px 3px 5px $shadow-color-nearwhite;
 }
 
@@ -20,6 +22,7 @@
 
 .btn-tertiary {
     @include button($btncolor: $btn-tertiary-color, $color: $text-color-nearwhite);
+    border: 1px solid $btn-tertiary-color;
     width: 150px;
 }
 
