@@ -1,0 +1,61 @@
+.features-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    padding-top: 1.5rem;
+}
+
+.features-links a {
+    text-decoration: none;
+    color: $text-color-midgrey;
+    border-top: 2px solid $line-color-lightgrey;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.features-links a:last-child {
+    border-bottom: 2px solid $line-color-lightgrey;    
+}
+
+.features-links a.active {
+    border-bottom: 3px solid $text-hovered;
+    color: $text-color-diverse;
+}
+
+.features-links a:hover {
+    color: $text-hovered;
+}
+
+.option-features {
+    display: none;
+}
+
+.option-features.activated {
+    display: flex;
+}
+
+.feat-description {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 2rem;
+}
+
+.feat-description h2 {
+    margin-top: 2rem;
+}
+
+.feat-description p {
+    color: $text-color-p;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    padding-top: 1.3rem;
+}
+
+.feat-description div button {
+    display: none;
+}
+

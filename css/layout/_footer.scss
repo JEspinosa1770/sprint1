@@ -1,0 +1,38 @@
+#footer-pure {
+    background-color: $background-footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.menu-footer li {
+    margin: 2rem 0;
+}
+
+.menu-footer li a {
+    color: $text-color-nearwhite;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.menu-footer li a:hover {
+    color: $text-hovered;
+}
+
+.social-foot {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.social-foot img:hover {
+    background-color: $text-hovered;
+}

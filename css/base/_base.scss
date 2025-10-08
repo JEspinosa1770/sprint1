@@ -1,0 +1,39 @@
+// General styles
+* {
+    font-family: $main-font;
+}
+
+body {
+    max-width: 100%;
+    font-size: 14px;
+}
+
+a {
+    font-family: $main-font;
+}
+
+.description {
+    @include style_description($text-color-p, 0.8rem, 1.8)
+}
+
+h1 {
+    @include styles_h($fontsize: 1.7rem);
+}
+
+h2 {
+    @include styles_h($fontsize: 1.4rem);
+}
+
+h3 {
+    @include styles_h($fontsize: 1rem);
+    margin: 1.6rem 0 0 0;
+}
+
+.twoButtons {
+    padding-top: 1.2rem;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

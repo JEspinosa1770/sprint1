@@ -122,13 +122,12 @@ a {
     color: var(--text-hovered);
 }
 
-/* TODO: PONER TODOS LOS BOTONES JUNTOS Y ACABAR DE HACER TODOS LOS HOOVER
-FALTAN LOS HOVER DE FOOTER Y DE LOS LOGOS */
+
 #btn-login {
     border: 2px solid var(--btn-lines-drop-menu);
     border-radius: 4px;
     margin: 0;
-    padding: 3px 30%;
+    padding: 3px 42%;
 }
 
 #btn-login:hover {
@@ -427,9 +426,9 @@ summary::marker {
 }
 
 /* Footer */
-footer {
+/* footer {
     background-color: brown;
-}
+} */
 
 .form {
     background-color: var(--background-color-form);
@@ -674,6 +673,7 @@ h3 {
         padding: 10px 15px 10px 15px ;
         border-radius: 4px;
         width: 150px;
+        margin: 5px;
         margin-left: 2rem;
     }
 

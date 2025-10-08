@@ -1,0 +1,47 @@
+// Faqs Section
+.faqs .description {
+    margin-bottom: 2rem;
+}
+
+summary, details {
+    all: unset;
+}
+
+summary::marker {
+    content: "";
+}
+
+.summary-text:hover {
+    color: $text-hovered;
+}
+
+.details-faqs {
+    width: 80%;
+}
+
+.detail {
+    padding-top: 2rem;
+}
+
+.question {
+    margin-top: 0.7rem;
+    border-bottom: 2px solid $line-color-lightgrey;
+    padding-bottom: 0.7rem;
+    font-size: 0.8rem;
+    list-style: none;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.question p {
+    text-align: left;
+}
+
+.detail[open] .icon-arrow {
+    content: url('http://127.0.0.1:5500/img/icon-arrow-red.svg')
+}
+
+.detail[close] .icon-arrow {
+    content: url('http://127.0.0.1:5500/img/icon-arrow.svg')
+}
+

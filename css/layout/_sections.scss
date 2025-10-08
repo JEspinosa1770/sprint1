@@ -1,0 +1,93 @@
+
+// Hero Section
+.simple {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.image::before {
+    @include imagebefore($left: 40px, $top: 80px, $width: 100%, $height: 70%)
+}
+
+.image {
+    display: block;
+    position: relative;
+    z-index: 1; 
+    max-width: 100%;
+    height: auto;
+}
+
+// Features Section
+.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.features img {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.feat-desc-image {
+    display: block;
+    position: relative;
+    z-index: 1; 
+    width: 100%;
+    height: auto;
+}
+
+.feat-desc-image::before {
+    @include imagebefore($left: -27%, $top: 80px, $width: 100%, $height: 70%)
+}
+
+.feat-desc-image img{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+}
+
+// Download Section
+.download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.download .description p {
+    margin-bottom: 2rem;
+}
+
+.download div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// Faqs Section
+.faqs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 100%;
+}
+
