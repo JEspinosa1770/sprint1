@@ -1,77 +1,40 @@
 @media screen and (min-width: $breakpoint-tablet) {
-    h1 {
-    text-align: left;
+    body {
+        font-size: 15px;
     }
 
     // Hero Section
-    // .simple {
-    //     display: flex;
-    //     flex-direction: row-reverse;
-    //     justify-content: center;
-    //     align-items: center;
-    //     padding-top: 3rem;
-    //     width: 80%;
-    //     margin: 0 auto;
-    // }
-
-    // .simple .description {
-    //     padding-left: 4rem;
-    //     padding-right: 2rem;
-    // }
-
-    // .simple image {
-    //     padding-right: 3rem;
-    // }
+    .simple {
+        max-width: 80%;
+    }
 
     // Features Section
     .features {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         padding-top: 3rem;
         width: 80%;
         margin: 0 auto;
     }
 
     .features .description {
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
     }
 
-    .feat-description img {
-        width: 100%;
-    }
-
     .feat-description h2 {
-        text-align: left;
+        margin-top: 2.5rem;
     }
 
-    .feat-desc-image {
-        display: block;
-        position: relative;
-        z-index: 1; 
-        max-width: 100%;
-        height: auto;
-    }
-
-    .feat-desc-image::before {
-        @include imagebefore($left: -100px, $top: 35%, $width: 100%, $height: 70%);
-    }
-
-    .feat-desc-image img{
-        max-width: 100%;
-        height: auto;
-        position: relative;
-        display: inline-block;
-    }
-
-        .features-links {
+    .features-links {
         display: flex;
         flex-direction: row;
         text-align: center;
-        // width: 57%;
         width: calc(max-width - 30%);
         padding-top: 1.5rem;
+        justify-content: center;
     }   
 
     .features-links a {
@@ -86,37 +49,32 @@
         margin: 0 auto;
     }
 
-    .feat-description {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        justify-content: center;
+    .feat-description img {
         width: 80%;
-        margin: 0 auto;
+        max-width: 80%;
     }
 
-    .feat-description div {
-        width: 50%;
+    .feat-desc-image {
         display: flex;
-        flex-direction: column;
-        text-align: center;
+        position: relative;
         justify-content: center;
-        margin-left: 3rem;
-        margin-top: 5rem;
+        z-index: 1; 
+        width: 100%;
+        height: auto;
     }
-
-    .feat-description div button {
-        display: block;
-        width: 30%;
-        margin: 2rem auto;
+    
+    .feat-desc-image::before {
+        @include imagebefore($left: -27%, $top: 40%, $width: 100%, $height: 70%);
+        border-radius: 0 0 15rem 0; 
     }
-
-    .features .feat-description h2 {
-        width: 100%
+    
+    .feat-description h2 {
+        padding-top: 3rem;
+        text-align: center;
     }
 
     // Download
-        .download .description {
+    .download .description {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -155,18 +113,22 @@
         margin: 0 auto;
     }
 
-    // Footer
     .contact {
-        width: 35%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact label {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
+        display: block;
+        margin-bottom: 1rem;
     }
 
     .contact div {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -192,84 +154,33 @@
     .contact input {
         width: 80%;
         margin: 0;
-        margin-right: 2rem;
+        margin-bottom: 1rem;
     }
 
     .contact .btn-tertiary {
         width: 200px;
-        /* padding: 0 2rem 0 2rem; */
         margin: 0;
     }
     .contact button {
         margin-bottom: 0;
     }
-
-    #footer-pure {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    #footer-pure .logo {
-        margin: 0 1rem 0 2rem;
-        width: 12%;
-        flex-grow: 1;
-    }
-
-    #footer-pure nav {
-        flex-grow: 3;
-    }
-
-    .menu-footer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: left;
-    }
-
-    .menu-footer li a {
-        margin: 0 2rem;
-    }
-
-    .social-foot {
-        margin: 0;
-        width: 15%;
-        flex-grow: 1;
-    }
-
 }
 
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop-min) {
-    body {
-        font-size: 15px;
-    }
-
-    // Footer
-    .contact div {
-        display: flex;
-        flex-direction: column;
-        /* flex-wrap: wrap; */
-    }
-    
-    .contact {
-        width: 80%;
-    }
-    
-    .contact label {
-        font-size: 1.3rem;
-        display: block;
-        margin-bottom: 1rem;
-    }
-    
-    .contact input {
-        margin-bottom: 1rem;
-    }
-}
-
-
-@media screen and (min-width: $breakpoint-desktop-min) and (max-width: $breakpoint-desktop-max) {
+@media screen and (min-width: $breakpoint-desktop-min) {
     body {
         font-size: 16px;
     }
+
+    .description {
+        @include style_description($text-color-p, 1rem, 1.8)
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 2rem;
+        margin-right: 5%;
+    }
+
     // Header Section
     .header {
         display: flex;
@@ -317,37 +228,158 @@
         justify-content: center;
         align-items: center;
         padding-top: 3rem;
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
     }
 
     .simple .description {
-        padding-left: 4rem;
-        padding-right: 2rem;
+        margin: 0 5% 0 15%;
+        width: 40%;
     }
 
-    .simple image {
-        padding-right: 3rem;
+    .simple img {
+        width: 80%;
+    }
+
+    .image::before {
+        @include imagebefore($left: 10%, $top: 30%, $width: 100%, $height: 70%)
+    }
+    
+    // Features
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    .features .description p {
+        width: 60%;
+        margin: 0 auto;       
+    }
+
+    .features-links a {
+        width: 100%;
+    }
+
+    .feat-description {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        margin: 0 5% 0 15%;
+        width: 100%;
+    }
+    
+    .feat-description img {
+        width: 80%;
+        max-width: 60%;
+    }
+
+    .feat-description div p {
+        text-align: left;
+        width: 80%;
+    }
+
+    .feat-description h2 {
+        text-align: left;
+    }
+
+    .feat-desc-image::before {
+        @include imagebefore($left: -27%, $top: 40%, $width: 100%, $height: 70%);
+        border-radius: 0 0 15rem 0; 
+    }
+
+    .feat-description div button {
+        display: block;
+        width: 30%;
+        margin: 2rem 0;
+    }
+
+    // Downloads
+    .download .description {
+        padding-top: 8rem;
+        margin-bottom: 2rem;
+    }
+
+    // FAQs
+    .faqs .description {
+        padding-top: 8rem;
+    }
+
+    .summary-text, .question {
+        font-size: 1rem;;
     }
 
     //Footer
     .contact label {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        max-width: 30%;
+    }
+
+    .contact div {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact input {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5%;
     }
 
     .foot-form {
         box-sizing: border-box;
-        /* margin: 0.5rem; */
     }
     
     .foot-form:nth-child(3) {
         width: 25%;
     }
 
+    #footer-pure {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #footer-pure .logo {
+        margin: 0 1rem 0 2rem;
+        width: 12%;
+        flex-grow: 1;
+    }
+
+    #footer-pure nav {
+        flex-grow: 3;
+    }
+
+    .menu-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .menu-footer li a {
+        margin: 0 2rem;
+    }
+
+    .social-foot {
+        margin: 0;
+        width: 15%;
+        flex-grow: 1;
+    }
+
     // Other
     #btn-login {
         @include button($btncolor: $btn-tertiary-color, $color: $text-color-nearwhite);
-        // border: none;
         width: 150px;
         margin-left: 2rem;
     }
@@ -356,5 +388,4 @@
         color: $text-hovered;
         background-color: $btn-lines-drop-menu;
     }
-
 }

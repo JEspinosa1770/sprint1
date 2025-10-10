@@ -23,7 +23,7 @@
     display: block;
     position: relative;
     z-index: 1; 
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
 }
 
@@ -36,6 +36,18 @@
     margin-top: 3rem;
 }
 
+.feat-description {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.feat-description div p {
+    text-align: center;
+}
+
 .features img {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -46,7 +58,7 @@
     display: block;
     position: relative;
     z-index: 1; 
-    width: 100%;
+    width: 75%;
     height: auto;
 }
 
@@ -71,7 +83,7 @@
 }
 
 .download .description p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .download div {

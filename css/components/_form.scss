@@ -9,13 +9,20 @@
 }
 
 .joined {
-    padding: 1rem 0;
+    margin: 2rem 0;
     color: $text-color-nearwhite;
     font-size: 0.7rem;
 }
 
 .contact {
     width: 80%;
+}
+
+.contact div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact label {
@@ -31,6 +38,9 @@
 
 .contact button {
     @include contact_input_btn($height: 5vh, $mbtn: 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .invalid {

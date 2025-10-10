@@ -66,29 +66,18 @@ function validateEmail (element) {
   const emailInput = document.getElementById('emailInput');
   var errorMSG = document.getElementById('errorMSG').id;
 console.log(errorMSG);
-// console.log(errorMSG.style.display);
-      // emailInput.addEventListener('input', function() {
-      //     if (this.validity.valid) {
-      //         this.classList.remove('invalid'); // Si es válido, quita la clase
-      //         errorMSG.style.display = 'none';
-      //     } else {
-      //         this.classList.add('invalid'); // Si es inválido, añade la clase
-      //         errorMSG.style.display = 'block';
-      //     }
-      // });
-      console.log(element.validity.valid);
-          if (element.validity.valid) {
-              element.classList.remove('invalid'); // Si es válido, quita la clase
-              // errorMSG.style.display = 'none';
-              // document.getElementById(errorMSG).style.display = 'none';
-              document.querySelector(".error").style.display= "block"; 
-          } else {
-              element.classList.add('invalid'); // Si es inválido, añade la clase
-              // errorMSG.style.display = 'block';
-              // document.getElementById(errorMSG).style.display = 'flex';
-              document.querySelector(".error").style.display= "none"; 
-          };
-
+console.log(element.validity.valid);
+  if (element.validity.valid) {
+      element.classList.remove('invalid'); // Si es válido, quita la clase
+      // errorMSG.style.display = 'none';
+      // document.getElementById(errorMSG).style.display = 'none';
+      document.querySelector(".error").style.display= "block"; 
+  } else {
+      element.classList.add('invalid'); // Si es inválido, añade la clase
+      // errorMSG.style.display = 'block';
+      // document.getElementById(errorMSG).style.display = 'flex';
+      document.querySelector(".error").style.display= "none"; 
+  };
 }
     
     
