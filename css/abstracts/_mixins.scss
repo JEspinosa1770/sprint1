@@ -20,7 +20,6 @@
 }
 
 @mixin button ($btncolor: $btn-primary-color, $color: $text-color-nearwhite) {
-    // border: 1px solid $btncolor;
     background-color: $btncolor;
     color: $color;
     padding: 10px 15px 10px 15px ;

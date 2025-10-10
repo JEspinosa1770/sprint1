@@ -6,6 +6,18 @@
 body {
   max-width: 100%;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -58,6 +70,7 @@ h3 {
   display: flex;
   flex-flow: row nowrap;
   padding: 2rem 1rem;
+  width: 80%;
 }
 
 .logo {
@@ -203,7 +216,7 @@ h3 {
   display: block;
   position: relative;
   z-index: 1;
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
 }
 
@@ -213,6 +226,18 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+}
+
+.feat-description {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.feat-description div p {
+  text-align: center;
 }
 
 .features img {
@@ -225,7 +250,7 @@ h3 {
   display: block;
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: 75%;
   height: auto;
 }
 
@@ -257,7 +282,7 @@ h3 {
 }
 
 .download .description p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .download div {
@@ -273,6 +298,10 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  width: 100%;
+}
+
+footer {
   width: 100%;
 }
 
@@ -386,13 +415,20 @@ h3 {
 }
 
 .joined {
-  padding: 1rem 0;
+  margin: 2rem 0;
   color: rgb(250, 250, 242);
   font-size: 0.7rem;
 }
 
 .contact {
   width: 80%;
+}
+
+.contact div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact label {
@@ -416,6 +452,9 @@ h3 {
   display: block;
   height: 5vh;
   margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .invalid {
@@ -500,6 +539,7 @@ summary::marker {
   font-size: 0.8rem;
   margin: 1rem 0 0 0;
   padding: 0;
+  text-align: center;
 }
 
 .features-links {
@@ -564,50 +604,27 @@ summary::marker {
 }
 
 @media screen and (min-width: 480px) {
-  h1 {
-    text-align: left;
+  body {
+    font-size: 15px;
+  }
+  .simple {
+    max-width: 80%;
   }
   .features {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding-top: 3rem;
     width: 80%;
     margin: 0 auto;
   }
   .features .description {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
   }
-  .feat-description img {
-    width: 100%;
-  }
   .feat-description h2 {
-    text-align: left;
-  }
-  .feat-desc-image {
-    display: block;
-    position: relative;
-    z-index: 1;
-    max-width: 100%;
-    height: auto;
-  }
-  .feat-desc-image::before {
-    content: "";
-    position: absolute;
-    left: -100px;
-    top: 35%;
-    width: 100%;
-    height: 70%;
-    background-color: rgb(82, 102, 223);
-    border-radius: 0 0 0 15rem;
-    z-index: 0;
-  }
-  .feat-desc-image img {
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    display: inline-block;
+    margin-top: 2.5rem;
   }
   .features-links {
     display: flex;
@@ -615,6 +632,7 @@ summary::marker {
     text-align: center;
     width: calc(max-width - 30%);
     padding-top: 1.5rem;
+    justify-content: center;
   }
   .features-links a {
     text-decoration: none;
@@ -627,30 +645,33 @@ summary::marker {
     padding-right: 2rem;
     margin: 0 auto;
   }
-  .feat-description {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
+  .feat-description img {
     width: 80%;
-    margin: 0 auto;
+    max-width: 80%;
   }
-  .feat-description div {
-    width: 50%;
+  .feat-desc-image {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    position: relative;
     justify-content: center;
-    margin-left: 3rem;
-    margin-top: 5rem;
-  }
-  .feat-description div button {
-    display: block;
-    width: 30%;
-    margin: 2rem auto;
-  }
-  .features .feat-description h2 {
+    z-index: 1;
     width: 100%;
+    height: auto;
+  }
+  .feat-desc-image::before {
+    content: "";
+    position: absolute;
+    left: -27%;
+    top: 40%;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(82, 102, 223);
+    border-radius: 0 0 0 15rem;
+    z-index: 0;
+    border-radius: 0 0 15rem 0;
+  }
+  .feat-description h2 {
+    padding-top: 3rem;
+    text-align: center;
   }
   .download .description {
     display: flex;
@@ -685,14 +706,19 @@ summary::marker {
     margin: 0 auto;
   }
   .contact {
-    width: 35%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .contact label {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 1rem;
   }
   .contact div {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -713,67 +739,37 @@ summary::marker {
   .contact input {
     width: 80%;
     margin: 0;
-    margin-right: 2rem;
+    margin-bottom: 1rem;
   }
   .contact .btn-tertiary {
     width: 200px;
-    /* padding: 0 2rem 0 2rem; */
     margin: 0;
   }
   .contact button {
     margin-bottom: 0;
   }
-  #footer-pure {
-    flex-direction: row;
-    justify-content: center;
-  }
-  #footer-pure .logo {
-    margin: 0 1rem 0 2rem;
-    width: 12%;
-    flex-grow: 1;
-  }
-  #footer-pure nav {
-    flex-grow: 3;
-  }
-  .menu-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-  }
-  .menu-footer li a {
-    margin: 0 2rem;
-  }
-  .social-foot {
-    margin: 0;
-    width: 15%;
-    flex-grow: 1;
-  }
 }
-@media screen and (min-width: 480px) and (max-width: 746px) {
-  body {
-    font-size: 15px;
-  }
-  .contact div {
-    display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-  }
-  .contact {
-    width: 80%;
-  }
-  .contact label {
-    font-size: 1.3rem;
-    display: block;
-    margin-bottom: 1rem;
-  }
-  .contact input {
-    margin-bottom: 1rem;
-  }
-}
-@media screen and (min-width: 746px) and (max-width: 1200px) {
+@media screen and (min-width: 767px) {
   body {
     font-size: 16px;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 2rem;
+  }
+  .description p {
+    color: grey;
+    font-size: 1rem;
+    line-height: 1.8;
+    padding-top: 1.3rem;
+    text-align: center;
+  }
+  h1 {
+    text-align: left;
+    font-size: 2rem;
+    margin-right: 5%;
   }
   .header {
     display: flex;
@@ -815,25 +811,139 @@ summary::marker {
     justify-content: center;
     align-items: center;
     padding-top: 3rem;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
   }
   .simple .description {
-    padding-left: 4rem;
-    padding-right: 2rem;
+    margin: 0 5% 0 15%;
+    width: 40%;
   }
-  .simple image {
-    padding-right: 3rem;
+  .simple img {
+    width: 80%;
+  }
+  .image::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(82, 102, 223);
+    border-radius: 0 0 0 15rem;
+    z-index: 0;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .features .description p {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .features-links a {
+    width: 100%;
+  }
+  .feat-description {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    margin: 0 5% 0 15%;
+    width: 100%;
+  }
+  .feat-description img {
+    width: 80%;
+    max-width: 60%;
+  }
+  .feat-description div p {
+    text-align: left;
+    width: 80%;
+  }
+  .feat-description h2 {
+    text-align: left;
+  }
+  .feat-desc-image::before {
+    content: "";
+    position: absolute;
+    left: -27%;
+    top: 40%;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(82, 102, 223);
+    border-radius: 0 0 0 15rem;
+    z-index: 0;
+    border-radius: 0 0 15rem 0;
+  }
+  .feat-description div button {
+    display: block;
+    width: 30%;
+    margin: 2rem 0;
+  }
+  .download .description {
+    padding-top: 8rem;
+    margin-bottom: 2rem;
+  }
+  .faqs .description {
+    padding-top: 8rem;
+  }
+  .summary-text, .question {
+    font-size: 1rem;
   }
   .contact label {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    max-width: 30%;
+  }
+  .contact div {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact input {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
   }
   .foot-form {
     box-sizing: border-box;
-    /* margin: 0.5rem; */
   }
   .foot-form:nth-child(3) {
     width: 25%;
+  }
+  #footer-pure {
+    flex-direction: row;
+    justify-content: center;
+  }
+  #footer-pure .logo {
+    margin: 0 1rem 0 2rem;
+    width: 12%;
+    flex-grow: 1;
+  }
+  #footer-pure nav {
+    flex-grow: 3;
+  }
+  .menu-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+  }
+  .menu-footer li a {
+    margin: 0 2rem;
+  }
+  .social-foot {
+    margin: 0;
+    width: 15%;
+    flex-grow: 1;
   }
   #btn-login {
     background-color: rgb(251, 88, 89);

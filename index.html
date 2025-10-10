@@ -28,7 +28,7 @@
                 <img src="img/icon-hamburger.svg" alt="Icono de hamburguesa para el menú oculto"> 
             </button>
         </div>
-        <nav id="nav-menu" class="hidden">
+        <nav id="nav-menu" class="hidden" aria-hidden="true">
             <div class="logo-hmenu">
                 <img src="img/icon.svg" alt="Logo de la página Bookmarks">
             </div>
@@ -53,7 +53,6 @@
         <section class="simple">
             <article class="image">
                 <img src="img/illustration-hero.svg" alt="Se muestra el dibujo de un menú con opciones">
-                <!-- <div class="back-image"></div> -->
             </article>
             <article class="description">
                 <h1>A Simple Bookmark Manager</h1>
@@ -70,7 +69,6 @@
                 <h2>Features</h2>
                 <p>Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
             </article>
-
             <nav class="features-links menu1">
                     <a href="#" class="active" data-id="1">Simple Bookmarking</a>
                     <a href="#" data-id="2">Speedy Searching</a>
@@ -131,7 +129,6 @@
                     </summary>
                     <div class="question">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quasi necessitatibus fuga, voluptas est totam doloribus aperiam quod quaerat ratione tenetur voluptatibus accusantium quis tempore facilis dolorum. Dignissimos, aperiam veniam.</p>
-
                     </div>
                 </details>
                 <details class="detail">
@@ -169,8 +166,8 @@
         <section class="form">
             <form action="" class="contact">
                 <p class="joined">35.000+ ALREADY JOINED</p>
+                <label class="foot-form" for="emailContact">Stay up-to-date with what we're doing</label>
                 <div>
-                    <label class="foot-form" for="emailContact">Stay up-to-date with what we're doing</label>
                     <input type="email" name="emailContact" id="emailInput" class="foot-form" placeholder="Enter your email address" >
                     <!-- <p id="errorMSG" class="error">Whooops, make sure it's an email</p> -->
                     <button class="foot-form btn-tertiary" onclick="validateEmail(this)">Contact us</button>
@@ -180,7 +177,7 @@
         <section class="foot">
             <div id="footer-pure">
                 <div class="logo">
-                    <img src="img/icon.svg" alt="Logo de la página Bookmarks">
+                    <a href="#"><img src="img/icon.svg" alt="Logo de la página Bookmarks"></a>
                 </div>
                 <nav>
                     <ul class="menu-footer">
