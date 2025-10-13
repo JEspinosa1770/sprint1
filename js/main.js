@@ -1,7 +1,6 @@
 "use strict"
 
 // Botón menu navegador
-
 const toggle = document.getElementById('menu-toggle');
 const closer = document.getElementById('menu-close');
 const menu = document.getElementById('nav-menu');
@@ -22,6 +21,8 @@ const contentImage = document.getElementById('content-image');
 const contentText = document.getElementById('content-text');
 const contentSubtitle = document.getElementById('content-subtitle');
 
+const active_class = 'active-underline';
+
 const data = {
   1: {
     img: 'img/illustration-features-tab-1.svg',
@@ -40,25 +41,41 @@ const data = {
   }
 };
 
+function activateLink(linkElement) {
+  // Borrar la clase activa de todos los enlaces
+  links.forEach(l => l.classList.remove('active'));
+  // Agregar clase activa al clicado
+  linkElement.classList.add('active');
+  // Seleccionar todos los subrayados
+  const allUnderlines = document.querySelectorAll('.js-underline');
+  // Borrar la clase roja de todos los span
+  allUnderlines.forEach(span => span.classList.remove(active_class));
+  // Obtener el span clicado
+  const currentUnderline = linkElement.querySelector('.js-underline');
+  // Agregar la clase rojo solo al span clicado
+  if (currentUnderline) {
+      currentUnderline.classList.add(active_class);
+  }
+  
+  // Obtener ID del enlace
+  const id = linkElement.getAttribute('data-id');
+  
+  // Actualizar contenido
+  contentImage.src = data[id].img;
+  contentSubtitle.textContent = data[id].h2;
+  contentText.textContent = data[id].text;
+}
+
 links.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
-
-    // Remover clase activa de todos los enlaces
-    links.forEach(l => l.classList.remove('active'));
-
-    // Agregar clase activa al clicado
-    link.classList.add('active');
-
-    // Obtener ID del enlace
-    const id = link.getAttribute('data-id');
-
-    // Actualizar contenido
-    contentImage.src = data[id].img;
-    contentSubtitle.textContent = data[id].h2;
-    contentText.textContent = data[id].text;
+    activateLink(link);
   });
-});
+}
+);
+if (links.length > 0) {
+    activateLink(links[0]);
+}
 // Fin seleccion Bookmarks
 
 // Validación email

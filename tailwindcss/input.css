@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-bg-contact: rgb(82, 102, 223);
+    --color-footer: rgb(36, 41, 70);
+    --color-text1: rgb(250, 250, 242);
+    --color-btn-primary: rgb(83, 101, 225);
+
+    /* Breakpoints */
+    --breakpoint-xs: 480px;
+}
+
+.active-underline {
+    @apply border-b-4 border-b-red-500;
+}
