@@ -1,19 +1,35 @@
 "use strict"
 
 // Botón menu navegador
-
 const toggle = document.getElementById('menu-toggle');
 const closer = document.getElementById('menu-close');
 const menu = document.getElementById('nav-menu');
 
-toggle.addEventListener('click', () => {
-  menu.classList.add('show');
-  menu.classList.remove('hidden');
-});
+// Función para abrir el menú
+const openMenu = () => {
+    menu.classList.add('flex');
+    menu.classList.remove('hidden');
+    menu.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+};
 
-closer.addEventListener('click', () => {
-  menu.classList.remove('show');
-  menu.classList.add('hidden');
+// Función para cerrar el menú
+const closeMenu = () => {
+    menu.classList.remove('flex');
+    menu.classList.add('hidden');
+    menu.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+};
+
+// Eventos
+toggle.addEventListener('click', openMenu);
+closer.addEventListener('click', closeMenu);
+
+// Cerrar con la tecla ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+        closeMenu();
+    }
 });
 
 // Seleccion Bookmarks
@@ -21,6 +37,8 @@ const links = document.querySelectorAll('.menu1 a');
 const contentImage = document.getElementById('content-image');
 const contentText = document.getElementById('content-text');
 const contentSubtitle = document.getElementById('content-subtitle');
+
+const active_class = 'active-underline';
 
 const data = {
   1: {
@@ -40,44 +58,60 @@ const data = {
   }
 };
 
+function activateLink(linkElement) {
+  links.forEach(l => l.classList.remove('active'));
+  linkElement.classList.add('active');
+  const allUnderlines = document.querySelectorAll('.js-underline');
+  allUnderlines.forEach(span => span.classList.remove(active_class));
+  const currentUnderline = linkElement.querySelector('.js-underline');
+  if (currentUnderline) {
+      currentUnderline.classList.add(active_class);
+  }
+  
+  const id = linkElement.getAttribute('data-id');
+  contentImage.src = data[id].img;
+  contentSubtitle.textContent = data[id].h2;
+  contentText.textContent = data[id].text;
+}
+
 links.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
-
-    // Remover clase activa de todos los enlaces
-    links.forEach(l => l.classList.remove('active'));
-
-    // Agregar clase activa al clicado
-    link.classList.add('active');
-
-    // Obtener ID del enlace
-    const id = link.getAttribute('data-id');
-
-    // Actualizar contenido
-    contentImage.src = data[id].img;
-    contentSubtitle.textContent = data[id].h2;
-    contentText.textContent = data[id].text;
+    activateLink(link);
   });
-});
+}
+);
+if (links.length > 0) {
+    activateLink(links[0]);
+}
 // Fin seleccion Bookmarks
 
 // Validación email
-function validateEmail (element) {
-  const emailInput = document.getElementById('emailInput');
-  var errorMSG = document.getElementById('errorMSG').id;
-console.log(errorMSG);
-console.log(element.validity.valid);
-  if (element.validity.valid) {
-      element.classList.remove('invalid'); // Si es válido, quita la clase
-      // errorMSG.style.display = 'none';
-      // document.getElementById(errorMSG).style.display = 'none';
-      document.querySelector(".error").style.display= "block"; 
-  } else {
-      element.classList.add('invalid'); // Si es inválido, añade la clase
-      // errorMSG.style.display = 'block';
-      // document.getElementById(errorMSG).style.display = 'flex';
-      document.querySelector(".error").style.display= "none"; 
-  };
-}
-    
-    
+const validateEmail = () => {
+    const emailInput = document.getElementById('emailInput');
+    const errorContainer = document.getElementById('errorContainer');
+    const errorIcon = document.getElementById('errorIcon');
+    const errorMessage = document.getElementById('errorMessage');
+
+    const emailValue = emailInput.value.trim();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailValue)) {
+        // Si el email NO es válido:
+        emailInput.classList.remove('border-white', 'border-2');
+        emailInput.classList.add('border-red-400', 'border-4');
+        errorIcon.classList.remove('hidden');
+        errorContainer.classList.remove('hidden');
+        return false;
+    } else {
+        // Si el email SÍ es válido:
+        emailInput.classList.remove('border-red-400', 'border-4');
+        emailInput.classList.add('border-white', 'border-2');
+        errorIcon.classList.add('hidden');
+        errorContainer.classList.add('hidden');
+       console.log("¡Email válido! Enviando contacto...");
+        return true;
+    }
+};
+
